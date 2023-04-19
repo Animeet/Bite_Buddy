@@ -22,9 +22,24 @@
     margin-top: 8.5px;
 }
 
-/* .btnstyle {
-    color: white;
-    background-color: rgb(254, 188, 2);
-    border: 6px solid rgb(193, 141, 0);
-    filter: drop-shadow(0 0 15px #FCE49E) drop-shadow(0 0 50px #FCE49E) contrast(2) brightness(2);
-} */
+#mapsize {
+    border: 7px solid white;
+    border-radius: 20px;
+    width: 600px;
+    height: 650px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgb(255, 221, 118);
+}
+
+.gradback {
+    background-image: -webkit-linear-gradient(40deg, #c5c5c5 50%, #d5d5d5 50%)
+}
+
+.headtext {
+    font-size: 49px;
+    text-decoration: underline;
+}
+
+.paratext {
+    font-size: 20px;
+}
