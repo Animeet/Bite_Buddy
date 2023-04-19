@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const db = require('./config/connection');
 
+class Business extends Model {};
 
 Business.init({
     email: {
