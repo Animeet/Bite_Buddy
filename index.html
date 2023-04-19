@@ -2,50 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <title>Bite Buddy</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <title>Bite Buddy</title>
 </head>
 
 <body>
-    <header>
-        <img src="" alt="">
-        <nav>
+  <header class="mb-5">
+    <nav class="navbar navbar-expand-lg bg-body-secondary m-2 border-bottom border-3 border-warning border-opacity-25">
+      <a class="navbar-brand fs-2 ps-5" id="mont" href="#">Bite Buddy</a>
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item pe-4">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a class="nav-link" href="#">About</a>
+            </li>
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="Username" placeholder="Username" aria-label="Username">
-                <input class="form-control me-2" type="Password" placeholder="Password" aria-label="Password">
-                <button class="btn btn-outline-success" type="submit">Login</button>
+              <input class="form-control me-2" type="text" placeholder="Username" aria-label="Username">
+              <input class="form-control me-2" type="text" placeholder="Password" aria-label="Password">
+              <button class="btn btn-outline-primary" type="submit">Login</button>
             </form>
-        </nav>
-    </header>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <section>
+    <div class="container d-flex flex-row text-center justify-content-evenly">
+      <div class="col-3 ">
+        <h2 class="fw-bold">Waste Less Product</h2>
+        <h2 class="fw-bold">Make More Money</h2>
+        <p>Whether you are a local restaurant or franchise, we understand there is a grey area of slow-times, less sale opportunity, and wasted food. Take advantage of Bite Buddy to put in the hard work of flipping those negatives into positives.</p>
+        <button class="btnstyle" type="submit">BUSINESS REGISTER</button>
+      </div>
+
+
+      <div class="p-5">
+        <img id="imgsize" src="public/images/neonarrow.png" alt="neon orange arrow">
+      </div>
+
+
+      <div class="col-3">
+        <h2 class="fw-bold">Save More Money</h2>
+        <h2 class="fw-bold">Dine More Often</h2>
+        <p class="p-2">If there is one thing we know, it's that eating out and ordering take-out is always great. Let Bite Buddy help make that happen more often, at a lower cost to your pockets!</p>
+        <button class="btnstyle btnmove" type="submit">USER REGISTER</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+
+  </section>
 
 
 
-    <section>
+  <section>
 
-    </section>
-
-
-
-    <section>
-
-    </section>
+  </section>
 
 
 
-    <section>
+  <footer>
 
-    </section>
-
-
-
-    <footer>
-
-    </footer>
+  </footer>
 </body>
 
 </html>
