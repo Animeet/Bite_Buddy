@@ -1,0 +1,30 @@
+
+
+#mont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#imgsize {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.btnstyle {
+    padding: 7px;
+    background-color: rgb(254, 188, 2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgb(255, 221, 118);
+}
+
+.btnmove {
+    margin-top: 8.5px;
+}
+
+/* .btnstyle {
+    color: white;
+    background-color: rgb(254, 188, 2);
+    border: 6px solid rgb(193, 141, 0);
+    filter: drop-shadow(0 0 15px #FCE49E) drop-shadow(0 0 50px #FCE49E) contrast(2) brightness(2);
+} */
