@@ -8,18 +8,19 @@ function isLoggedIn(req, res, next) {
 }
 
 // Render the Homepage view
-router.get('/', isLoggedIn, (req, res) => {
+router.get('/', async (req, res) => {
+  const user = await User.findOne({
+    where: {
+        id: req.session.user_id
+    }
+})
   res.render('index');
 //   confirm path line 12
 });
 
-// Render the Login Page view
-router.get('/login', isLoggedIn, (req, res) => {
-  res.render('auth/login');
-//   confirm path line 18
-});
+
 // Render the Register Page view
-router.get('/register', isLoggedIn, (req, res) => {
+router.get('/register', (req, res) => {
   res.render('auth/register');
 // confirm path line 23
 });

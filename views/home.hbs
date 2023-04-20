@@ -13,9 +13,9 @@
             <li class="nav-item pe-4">
               <a class="nav-link" href="#">About</a>
             </li>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="text" placeholder="Username" aria-label="Username">
-              <input class="form-control me-2" type="text" placeholder="Password" aria-label="Password">
+            <form class="d-flex" action="/auth/login" method="POST" role="search">
+              <input name="username" class="form-control me-2" type="text" placeholder="Username" aria-label="Username">
+              <input name="password" class="form-control me-2" type="text" placeholder="Password" aria-label="Password">
               <button class="btn btn-outline-primary" type="submit">Login</button>
             </form>
           </ul>
