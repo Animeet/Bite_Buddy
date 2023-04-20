@@ -73,7 +73,6 @@
 
 .foottext {
     font-size: 35px;
-    text-decoration: underline;
 }
 
 .borbot {
@@ -183,6 +182,9 @@
     margin: 0 auto;
 }
 
+.testheight {
+    min-height: 500px;
+}
 
 .ourStory_top,
 .ourStory_container {
@@ -212,6 +214,7 @@
     object-fit: cover;
     border-radius: 50%;
     border: 10px solid whitesmoke;
+    background-color: white;
     box-shadow: rgb(225, 221,118) 0px 0px 25px;
     z-index: 99;
 }
