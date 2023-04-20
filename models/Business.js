@@ -41,19 +41,19 @@ Business.init({
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
-    food_package: {
-        type: DataTypes.BOOLEAN,
+    dining_deal: {
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {
     sequelize: db,
     modelName: 'business',
-    hooks: {
-        async beforeCreate(user) {
-            const encrypted_pass = await bcrypt.hash(user.password, 10);
-            user.password = encrypted_pass;
-        }
-    }
+    // hooks: {
+    //     async beforeCreate(user) {
+    //         const encrypted_pass = await bcrypt.hash(user.password, 10);
+    //         user.password = encrypted_pass;
+    //     }
+    // }
 });
 
 
