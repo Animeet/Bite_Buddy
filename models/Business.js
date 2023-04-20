@@ -44,14 +44,14 @@ Business.init({
     },
     food: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: falsegit
     },
     delivery: {
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
-    food_package: {
-        type: DataTypes.BOOLEAN,
+    dining_deal: {
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {
