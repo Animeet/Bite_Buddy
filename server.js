@@ -5,13 +5,21 @@ const auth_routes = require('./controllers/auth_routes');
 const private_routes = require('./controllers/private_routes');
 const public_routes = require('./controllers/public_routes');
 const db = require('./config/connection');
+const session = require('express-session');
 const { engine } = require('express-handlebars');
+require('dotenv').config();
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded( {extended: false} ));
 app.use(express.static('public'));
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.engine('hbs', engine({
     extname: '.hbs',
