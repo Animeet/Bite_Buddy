@@ -12,11 +12,19 @@ class User extends Model {
 
 
 User.init({
+    username: {
+        type: DataTypes.STRING,
+        unique: true,
+        validate: {
+            max: 30
+        },
+        allowNull: false
+    },
     email: {
         type: DataTypes.STRING,
         unique: true,
         validate: {
-            max: 50,
+            max: 100,
             isEmail: true
         },
         allowNull: false
@@ -26,12 +34,10 @@ User.init({
         validate: {
             max: 30,
             min: 6,
-            msg: "Your password must be a minimum of 6 characters in length",
+            msg: "Your password must be a minimum of 6 characters in length"
         },
         allowNull: false
     },
-
-
 }, {
     sequelize: db,
     modelName: 'user',
