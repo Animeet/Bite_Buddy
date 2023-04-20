@@ -1,5 +1,6 @@
 const User = require('./User');
 const Business = require('./Business');
+const Subscribe = require('./Subscribe');
 
 User.hasOne(Business, {
     foreignKey: 'user_id',
@@ -12,5 +13,6 @@ Business.belongsTo(User, {
 
 module.exports = {
     User,
-    Business
+    Business,
+    Subscribe
 };
