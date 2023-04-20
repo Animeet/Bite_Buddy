@@ -50,8 +50,8 @@ Business.init({
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
-    food_package: {
-        type: DataTypes.BOOLEAN,
+    dining_deal: {
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {
