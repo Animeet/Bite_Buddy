@@ -182,12 +182,9 @@
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
 .testheight {
     min-height: 500px;
 }
-=======
->>>>>>> 73a8c640d29ba72ffedb4cfb2d774b1b82c5b9e8
 
 .ourStory_top,
 .ourStory_container {
@@ -217,10 +214,7 @@
     object-fit: cover;
     border-radius: 50%;
     border: 10px solid whitesmoke;
-<<<<<<< HEAD
     background-color: white;
-=======
->>>>>>> 73a8c640d29ba72ffedb4cfb2d774b1b82c5b9e8
     box-shadow: rgb(225, 221,118) 0px 0px 25px;
     z-index: 99;
 }
