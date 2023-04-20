@@ -1,15 +1,23 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const db = require('./config/connection');
 
 class Business extends Model {};
 
 Business.init({
+    username: {
+        type: DataTypes.STRING,
+        unique: true,
+        validate: {
+            max: 30
+        },
+        allowNull: false
+    },
     email: {
         type: DataTypes.STRING,
         unique: true,
         validate: {
-            max: 50,
+            max: 100,
             isEmail: true
         },
         allowNull: false
@@ -49,12 +57,12 @@ Business.init({
 }, {
     sequelize: db,
     modelName: 'business',
-    hooks: {
-        async beforeCreate(user) {
-            const encrypted_pass = await bcrypt.hash(user.password, 10);
-            user.password = encrypted_pass;
-        }
-    }
+    // hooks: {
+    //     async beforeCreate(user) {
+    //         const encrypted_pass = await bcrypt.hash(user.password, 10);
+    //         user.password = encrypted_pass;
+    //     }
+    // }
 });
 
 
