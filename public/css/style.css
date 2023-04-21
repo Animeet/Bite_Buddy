@@ -9,6 +9,10 @@
     max-height: 250px;
 }
 
+.appback {
+    background-color: #7E8C9C;
+}
+
 .btnstyle {
     padding: 7px;
     background-color: rgb(254, 188, 2);
@@ -16,6 +20,28 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 25px rgb(255, 221, 118);
+}
+
+.appzip {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px 8px 0 0;
+}
+
+.appresults {
+    background-color: white;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.appfav {
+    background-color: white;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 0 0 8px 8px;
+
 }
 
 .btnmove {
@@ -245,4 +271,10 @@
     line-height: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+#map {
+    border: 5px solid white;
+    border-radius: 15px;
+    overflow: hidden;
 }
