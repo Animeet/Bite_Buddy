@@ -31,4 +31,22 @@ router.get('/application', isAuthenticated, async (req, res) => {
 });
 
 
+router.post('/favorite', async (req, res) => {
+    console.log(req.body)
+    const favoriteData = req.body
+    const user = await User.findByPk(req.session.user_id, {
+        include: Favorite
+    });
+    const fav_found = user.favorties.find(fav => fav.name === favoriteData.name)
+
+    if (fav_found) return res.send(false);
+
+    const fav = await user.createFavorite({
+        name: favoriteData.name
+    });
+
+    res.send(fav);
+})
+
+
 module.exports = router;

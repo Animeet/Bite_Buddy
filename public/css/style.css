@@ -407,7 +407,20 @@ hr {
 }
 
 #map {
+    width: 100%;
+    height: 800px;
     border: 5px solid white;
     border-radius: 15px;
     background-color: white;
+}
+
+
+#map > * {
+    border-radius: 15px;
+}
+
+
+#results li {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
