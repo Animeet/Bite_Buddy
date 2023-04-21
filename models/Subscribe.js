@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 // const bcrypt = require('bcrypt');
-const db = require('./config/connection');
+const db = require('../config/connection');
 
 
 class Subscribe extends Model {}
@@ -27,6 +27,7 @@ Subscribe.init({
 }, {
     sequelize: db,
     modelName: 'subscribe',
+    freezeTableName: true,
     // hooks: {
     //     async beforeCreate(user) {
     //         const encrypted_pass = await bcrypt.hash(user.password, 10);

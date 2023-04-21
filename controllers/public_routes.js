@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const path = require('path')
 
 function isLoggedIn(req, res, next) {
   if (req.session.user_id) return res.redirect('/application');
@@ -21,5 +21,9 @@ router.get('/', async (req, res) => {
 router.get('/register', (req, res) => {
   res.render('auth/register');
 });
+
+router.get('/mapSandbox', (req, res) => {
+  res.sendFile(path.join(__dirname, './../application.html'))
+})
 
 module.exports = router;
