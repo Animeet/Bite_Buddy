@@ -6,21 +6,16 @@ class Business extends Model {};
 
 Business.init({
     username: {
-        type: DataTypes.STRING,
-        unique: true,
-        validate: {
-            max: 30
-        },
-        allowNull: false
+        references: {
+            model: 'user',
+            key: 'username'
+          },
     },
     email: {
-        type: DataTypes.STRING,
-        unique: true,
-        validate: {
-            max: 100,
-            isEmail: true
-        },
-        allowNull: false
+        references: {
+            model: 'user',
+            key: 'email'
+          },
     },
     user_id: {
         references: {
