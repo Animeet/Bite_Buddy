@@ -246,3 +246,147 @@
     margin-bottom: 1rem;
     text-align: center;
 }
+
+
+
+.businessInformation_container {
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+input[type=nameText], input[type=addressText], input[type=phoneNumber],input[type=FoodCategory], input[type=delivery],input[type=discountDeals] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: #f1f1f1;
+    background: #f1f1f1;
+}
+
+input[type=nameText]:focus, input[type=addressText]:focus, input[type=phoneNumber]:focus, input[type=FoodCategory]:focus, input[type=delivery]:focus, input[type=discountDeals]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn {
+    background-color: lightblue;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* CHECKMARK FOR REGISTER PAGE */
+/* Checkbox container */
+.checkBox_container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+/* hide the browser's default radio button */
+.checkBox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* custom a radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* on mouse-over, add a grey background color */
+.checkBox_container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* when the radio button is checked add a blue background */
+.checkBox_container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* makes dot when it is clicked, hidden when not checked */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* shows the dote when it is checked */
+.checkBox_container input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.checkBox_container .checkmark::after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* The modal */
+
+/* the background */
+.modal {
+    display: none; /*hidden by default  */
+    position: fixed; /* stay in place */
+    z-index: 1; /* sit on top*/
+    left: 0;
+    top: 0;
+    width: 100%; /* full width */
+    height: 100%; /* full height */
+    overflow: auto; /* enable scroll if needed */
+    background-color: rgb(0,0,0); /* fallback color */
+    background-color: rgba(0,0,0,0.4); /* black with opactiy */
+}
+ 
+/* modal content box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered*/
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+/* the close button*/
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
