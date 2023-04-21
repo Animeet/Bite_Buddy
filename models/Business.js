@@ -44,7 +44,7 @@ Business.init({
     },
     food: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: falsegit
     },
     delivery: {
         type: DataTypes.BOOLEAN,
