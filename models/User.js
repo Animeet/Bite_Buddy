@@ -38,6 +38,12 @@ User.init({
         },
         allowNull: false
     },
+    first_name: {
+        type: DataTypes.STRING,
+    },
+    last_name: {
+        type: DataTypes.STRING,
+    },
 }, {
     sequelize: db,
     modelName: 'user',

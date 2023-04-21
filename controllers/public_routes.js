@@ -2,8 +2,7 @@ const router = require('express').Router();
 const path = require('path')
 
 function isLoggedIn(req, res, next) {
-  if (req.session.user_id) return res.redirect('/dashboard');
-//  confirm path line 5
+  if (req.session.user_id) return res.redirect('/application');
   next();
 }
 
@@ -14,15 +13,13 @@ router.get('/', async (req, res) => {
         id: req.session.user_id
     }
 })
-  res.render('index');
-//   confirm path line 12
+  res.render('home');
 });
 
 
 // Render the Register Page view
 router.get('/register', (req, res) => {
   res.render('auth/register');
-// confirm path line 23
 });
 
 router.get('/mapSandbox', (req, res) => {
