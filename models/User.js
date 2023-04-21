@@ -31,11 +31,6 @@ User.init({
     },
     password: {
         type: DataTypes.STRING,
-        validate: {
-            max: 30,
-            min: 6,
-            msg: "Your password must be a minimum of 6 characters in length"
-        },
         allowNull: false
     },
     first_name: {
@@ -52,6 +47,7 @@ User.init({
         async beforeCreate(user) {
             const encrypted_pass = await bcrypt.hash(user.password, 10);
             user.password = encrypted_pass;
+            console.log(user.password)
         }
     }
 });
