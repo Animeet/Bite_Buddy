@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,23 +44,23 @@
 
     <section class="appback d-flex flex-row">
         <section class="col-2">
-            <div class="ps-3 pt-3">
+            <div class="ps-5 pt-5">
                 <form class="d-flex p-4 appzip" id="mapApiBox">
-                    <input class="form-control me-2" type="text" pattern="[0-9]{5}" placeholder="Five digit zip code"
+                    <input class="form-control me-2" id="input-zip"type="text" pattern="[0-9]{5}" placeholder="Five digit zip code"
                         aria-label="Zipcode">
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
             </div>
 
 
-            <div class="ps-3">
+            <div class="ps-5">
                 <div class="d-flex p-4 appresults justify-content-center">
                     <h2 class="text-decoration-underline">Results</h2>
                 </div>
             </div>
 
 
-            <div class="ps-3 pb-3">
+            <div class="ps-5 pb-5">
                 <div class="d-flex p-4 appresults justify-content-center">
                     <h2 class="text-decoration-underline">Favorites</h2>
                 </div>
@@ -68,10 +68,10 @@
         </section>
 
         <section>
-            <div id="map">
+            <div id="map" class="m-5">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224791.2599037498!2d-81.89551078774743!3d28.317601178613945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77eddb1114671%3A0x9b83d5091f83cf0a!2sHard%20Rock%20Cafe!5e0!3m2!1sen!2sus!4v1679516791133!5m2!1sen!2sus"
-                    width="1000" height="750" class="pt-1 ps-1 pe-1"
+                    width="2000" height="1200" class="pt-1 ps-1 pe-1"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -83,13 +83,13 @@
         <div class="container">
             <div class="text-center center-block p-1">
                 <h3 class="mont fw-bold foottext p-3">Bite Buddy</h3>
-                <a class="p-3" href="https://www.facebook.com/bitebuddy"><img src="public/images/icons8-facebook-48.png"
+                <a class="p-3" href="https://www.facebook.com/bitebuddy"><img src="images/icons8-facebook-48.png"
                         alt="facebook icon"></a>
-                <a class="p-3" href="https://twitter.com/bitebuddy"><img src="public/images/icons8-twitter-48.png"
+                <a class="p-3" href="https://twitter.com/bitebuddy"><img src="images/icons8-twitter-48.png"
                         alt="twitter icon"></a>
-                <a class="p-3" href="https://instagram.com/bitebuddy"><img src="public/images/icons8-instagram-48.png"
+                <a class="p-3" href="https://instagram.com/bitebuddy"><img src="images/icons8-instagram-48.png"
                         alt="instagram icon"></a>
-                <a class="p-3" href="https://linkedin.com/bitebuddy"><img src="public/images/icons8-linkedin-48.png"
+                <a class="p-3" href="https://linkedin.com/bitebuddy"><img src="images/icons8-linkedin-48.png"
                         alt="linkedin icon"></a>
                 <p class="pt-4">&copy; 2023 Bite Buddy. All Rights Reserved</p>
             </div>

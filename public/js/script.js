@@ -49,7 +49,8 @@ function initMap(zip) {
     var getCoordinates = function (results, status) {
         if (status = 'OK') {
             console.log(results)
-            showBarLocations(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+            // pass the results into some function that renders them on the sidebar
+            showBarLocations(results[0]?.geometry.location.lat(), results[0].geometry.location.lng());
         }
     }
     geocoder.geocode({ address: zip }, getCoordinates)
@@ -57,7 +58,7 @@ function initMap(zip) {
 
 function search(eventObj) {
     eventObj.preventDefault();
-    var input = $('.input')
+    var input = $('#input-zip')
     var zip = input.val();
     initMap(zip);
     input.val('')
@@ -66,6 +67,13 @@ function search(eventObj) {
 function init() {
     document.querySelector('#mapApiBox')
     $('#mapApiBox').submit(search);
+}
+
+function renderSidebar(arrData) {
+    $('#sidebar').html('')
+    for (let restaurant of arrData) {
+        $('#sidebar').append('RestaurantDAta' + JSON.stringify(restaurant))
+    }
 }
 
 init();
