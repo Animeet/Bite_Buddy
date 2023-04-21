@@ -8,11 +8,11 @@ function isLoggedIn(req, res, next) {
 
 // Render the Homepage view
 router.get('/', async (req, res) => {
-  const user = await User.findOne({
-    where: {
-        id: req.session.user_id
-    }
-})
+  // const user = await User.findOne({
+  //   where: {
+  //       id: req.session.user_id
+  //   }
+// })
   res.render('home');
 });
 
@@ -24,10 +24,10 @@ router.get('/', async (req, res) => {
 
 // Render the Register Page view
 router.get('/register', (req, res) => {
-  res.render('auth/register');
+  res.render('register');
 });
 
-router.get('/mapSandbox', (req, res) => {
+router.get('/application1', (req, res) => {
   res.sendFile(path.join(__dirname, './../application.html'))
 })
 

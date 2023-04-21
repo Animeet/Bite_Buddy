@@ -70,7 +70,7 @@ function initMap(zip) {
         var request = {
             location: map.getCenter(),
             radius: '3000',
-            type: ['bar']
+            type: ['restaurant']
         };
 
         service = new google.maps.places.PlacesService(map);
@@ -112,7 +112,7 @@ function init() {
 function renderSidebar(arrData) {
     $('#sidebar').html('')
     for (let restaurant of arrData) {
-        $('#sidebar').append('RestaurantDAta' + JSON.stringify(restaurant))
+        $('#sidebar').append('RestaurantData' + JSON.stringify(restaurant))
     }
 }
 
