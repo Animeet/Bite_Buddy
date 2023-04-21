@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const path = require('path')
 
 function isLoggedIn(req, res, next) {
   if (req.session.user_id) return res.redirect('/dashboard');
@@ -24,5 +24,9 @@ router.get('/register', (req, res) => {
   res.render('auth/register');
 // confirm path line 23
 });
+
+router.get('/mapSandbox', (req, res) => {
+  res.sendFile(path.join(__dirname, './../application.html'))
+})
 
 module.exports = router;

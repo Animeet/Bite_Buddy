@@ -37,6 +37,7 @@ function initMap(zip) {
         service.nearbySearch(request, (results, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK && results) {
                 for (let i = 0; i < results.length; i++) {
+                    console.log(results)
                     createMarker(results[i]);
                 }
 
@@ -47,6 +48,7 @@ function initMap(zip) {
 
     var getCoordinates = function (results, status) {
         if (status = 'OK') {
+            console.log(results)
             showBarLocations(results[0].geometry.location.lat(), results[0].geometry.location.lng());
         }
     }

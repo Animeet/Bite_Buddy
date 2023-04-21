@@ -48,13 +48,9 @@
     margin-top: 8.5px;
 }
 
-#mapsize {
-    border: 7px solid white;
+#maprad {
     border-radius: 20px;
-    width: 600px;
-    height: 650px;
     overflow: hidden;
-    box-shadow: 0 0 25px rgb(255, 221, 118);
 }
 
 .gradback {
@@ -276,5 +272,7 @@
 #map {
     border: 5px solid white;
     border-radius: 15px;
-    overflow: hidden;
+    background-color: white;
 }
+
+

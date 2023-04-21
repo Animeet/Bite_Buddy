@@ -42,11 +42,12 @@
         </nav>
     </header>
 
-    <section class="appback flex-row">
+    <section class="appback d-flex flex-row">
         <section class="col-2">
             <div class="ps-3 pt-3">
-                <form class="d-flex p-4 appzip" action="">
-                    <input class="form-control me-2" type="text" placeholder="Zip code" aria-label="Zipcode">
+                <form class="d-flex p-4 appzip" id="mapApiBox">
+                    <input class="form-control me-2" type="text" pattern="[0-9]{5}" placeholder="Five digit zip code"
+                        aria-label="Zipcode">
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
             </div>
@@ -65,11 +66,12 @@
                 </div>
             </div>
         </section>
+
         <section>
             <div id="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224791.2599037498!2d-81.89551078774743!3d28.317601178613945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77eddb1114671%3A0x9b83d5091f83cf0a!2sHard%20Rock%20Cafe!5e0!3m2!1sen!2sus!4v1679516791133!5m2!1sen!2sus"
-                    width="1000" height="750" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="1000" height="750" class="pt-1 ps-1 pe-1"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -93,6 +95,12 @@
             </div>
         </div>
     </footer>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiWKfpAZq9FUME7KMWsyEFw0z1vYloYkY&libraries=places&callback=Function.prototype"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
