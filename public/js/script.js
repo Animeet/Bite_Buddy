@@ -37,6 +37,7 @@ function initMap(zip) {
         service.nearbySearch(request, (results, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK && results) {
                 for (let i = 0; i < results.length; i++) {
+                    console.log(results)
                     createMarker(results[i]);
                 }
 
@@ -47,7 +48,9 @@ function initMap(zip) {
 
     var getCoordinates = function (results, status) {
         if (status = 'OK') {
-            showBarLocations(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+            console.log(results)
+            // pass the results into some function that renders them on the sidebar
+            showBarLocations(results[0]?.geometry.location.lat(), results[0].geometry.location.lng());
         }
     }
     geocoder.geocode({ address: zip }, getCoordinates)
@@ -55,7 +58,7 @@ function initMap(zip) {
 
 function search(eventObj) {
     eventObj.preventDefault();
-    var input = $('.input')
+    var input = $('#input-zip')
     var zip = input.val();
     initMap(zip);
     input.val('')
@@ -64,6 +67,13 @@ function search(eventObj) {
 function init() {
     document.querySelector('#mapApiBox')
     $('#mapApiBox').submit(search);
+}
+
+function renderSidebar(arrData) {
+    $('#sidebar').html('')
+    for (let restaurant of arrData) {
+        $('#sidebar').append('RestaurantDAta' + JSON.stringify(restaurant))
+    }
 }
 
 init();

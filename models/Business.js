@@ -1,28 +1,26 @@
 const { Model, DataTypes } = require('sequelize');
 // const bcrypt = require('bcrypt');
-const db = require('./config/connection');
+const db = require('../config/connection');
 
 class Business extends Model {};
 
 Business.init({
     username: {
-        type: DataTypes.STRING,
-        unique: true,
-        validate: {
-            max: 30
-        },
-        allowNull: false
+        type:DataTypes.STRING,
+        references: {
+            model: 'user',
+            key: 'username'
+          },
     },
     email: {
-        type: DataTypes.STRING,
-        unique: true,
-        validate: {
-            max: 100,
-            isEmail: true
-        },
-        allowNull: false
+        type:DataTypes.STRING,
+        references: {
+            model: 'user',
+            key: 'email'
+          },
     },
     user_id: {
+        type: DataTypes.INTEGER,
         references: {
         model: 'user',
         key: 'id'
@@ -50,13 +48,14 @@ Business.init({
         type: DataTypes.BOOLEAN,
         allowNull: false
     },
-    food_package: {
-        type: DataTypes.BOOLEAN,
+    dining_deal: {
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {
     sequelize: db,
     modelName: 'business',
+    freezeTableName: true,
     // hooks: {
     //     async beforeCreate(user) {
     //         const encrypted_pass = await bcrypt.hash(user.password, 10);

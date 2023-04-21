@@ -1,17 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const PORT = process.env.PORT || 3001;
-const api_routes = require('./controllers/api_routes');
-const auth_routes = require('./controllers/auth_routes');
-const private_routes = require('./controllers/private_routes');
-const public_routes = require('./controllers/public_routes');
+const session = require('express-session');
+const routes = require('./controllers');
 const db = require('./config/connection');
 const { engine } = require('express-handlebars');
 
 const app = express();
-
-app.use(express.json());
-app.use(express.urlencoded( {extended: false} ));
-app.use(express.static('public'));
 
 app.engine('hbs', engine({
     extname: '.hbs',
@@ -22,8 +17,17 @@ app.engine('hbs', engine({
 app.set('view engine', 'hbs');
 app.set('views', './views');
 
-app.use('/', [api_routes, auth_routes, private_routes, public_routes]);
+app.use(express.json());
+app.use(express.urlencoded( {extended: true} ));
+app.use(express.static('public'));
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
 
-db.sync({ force: false }), then (() => {
+app.use('/', routes);
+
+db.sync().then (() => {
     app.listen(PORT, () => console.log('Server listening on Port %s', PORT))
 });
