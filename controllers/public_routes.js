@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const path = require('path')
+
 
 function isLoggedIn(req, res, next) {
   if (req.session.user_id) return res.redirect('/application');
@@ -16,10 +16,10 @@ router.get('/', async (req, res) => {
   res.render('home');
 });
 
-// // Render the Application view
-// router.get('/application', (req, res) => {
-//   res.render('application');
-// });
+// Render the Application view
+router.get('/application', (req, res) => {
+  res.render('application');
+});
 
 
 
