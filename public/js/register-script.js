@@ -17,6 +17,16 @@ function registerAccount (e) {
             window.location.pathname = '/'
         })
     }
+    $.post('/auth/register/business', {
+            business_name: $('#BusinessName').val(),
+            business_address: $('#BusinessAddress').val(),
+            phone_number: $('#PhoneNumber').val(),
+            food: $('#FoodCategory').val(),
+            delivery: $('delivery').val(),
+            dining_deal: $('discountDeals').val()
+    }).then (() => {
+        window.location.pathname = '/'
+    })
 }
 
 $('#regform').submit(registerAccount)
