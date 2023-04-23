@@ -2,8 +2,8 @@ const router = require('express').Router();
 const { User, Business } = require('../models')
 
 
-
-router.post('/auth/login', async (req, res) => {
+//User
+router.post('/auth/login/user', async (req, res) => {
     const formData = req.body;
 
     const user = await User.findOne({
@@ -20,45 +20,55 @@ router.post('/auth/login', async (req, res) => {
     res.redirect('/')
 });
 
-router.post('/auth/register', async (req, res) => {
-    const formData = req.body;
 
+// Currently, if password is less than 6 or greater than 30, app crashes.
+// Fix by sending a message back to the front end to provide an error message to the user to try again.
+router.post('/auth/register/user', async (req, res) => {
+    const formData = req.body;
+    if(formData.password.length < 6 || formData.password.length > 30) {
+        throw new Error('Password needs to be a minimum of 6 characters')
+    }
+    
     try {
         const user = await User.create(formData);
         req.session.user_id = user.id
         res.redirect('/')
     } catch (err) {
+        console.log(err)
         res.redirect('/')
     }
 });
 
-router.post('/auth/login', async (req, res) => {
-    const formData = req.body;
 
-    const user = await Business.findOne({
-        where: {
-            username: formData.username
-        }
-    })
-    if (!user) return res.redirect('/register')
+// // Business
+// router.post('/auth/login', async (req, res) => {
+//     const formData = req.body;
 
-    const valid_pass = await user.validatePassword(formData.password)
-    if (!valid_pass) return res.redirect('/')
+//     const user = await Business.findOne({
+//         where: {
+//             username: formData.username
+//         }
+//     })
+//     if (!user) return res.redirect('/register')
 
-    req.session.user_id = user.id
-    res.redirect('/')
-});
+//     const valid_pass = await user.validatePassword(formData.password)
+//     if (!valid_pass) return res.redirect('/')
 
-router.post('/auth/register', async (req, res) => {
-    const formData = req.body;
+//     req.session.user_id = user.id
+//     res.redirect('/')
+// });
 
-    try {
-        const user = await Business.create(formData);
-        req.session.user_id = user.id
-        res.redirect('/')
-    } catch (err) {
-        res.redirect('/')
-    }
-});
+// router.post('/auth/register', async (req, res) => {
+//     const formData = req.body;
+//     console.log(req)
+
+//     try {
+//         const user = await Business.create(formData);
+//         req.session.user_id = user.id
+//         res.redirect('/')
+//     } catch (err) {
+//         res.redirect('/')
+//     }
+// });
 
 module.exports = router;

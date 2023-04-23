@@ -1,6 +1,46 @@
 var map;
 var service;
 var infowindow;
+var favorites = [];
+
+function updateResults(results) {
+    const resultsOutput = $('#results')
+    resultsOutput.empty()
+    results.forEach((place) => {
+        resultsOutput.append(`
+        <li>
+            <span>${place.name}</span>
+            <button data-place-name="${place.name}">Favorite</button>
+        </li>
+        `)
+    })
+}
+
+function updateFavorites() {
+    const favoritesOutput = $('#favorites')
+    favoritesOutput.empty()
+    favorites.forEach((favorite) => {
+        favoritesOutput.append(`
+        <li>
+            <span>${favorite.name}</span>
+        </li>
+        `)
+    })
+}
+
+async function addFavorite() {
+    const placeName = $(this).data('place-name')
+    const favorite = await $.post('/favorite', {
+        name: placeName
+    })
+    
+    if (!favorite) return;
+
+    favorites.push(favorite)
+   
+    updateFavorites()
+}
+$('#results').on('click', 'button', addFavorite)
 
 function initMap(zip) {
     var geocoder = new google.maps.Geocoder();
@@ -30,7 +70,7 @@ function initMap(zip) {
         var request = {
             location: map.getCenter(),
             radius: '3000',
-            type: ['bar']
+            type: ['restaurant']
         };
 
         service = new google.maps.places.PlacesService(map);
@@ -40,7 +80,7 @@ function initMap(zip) {
                     console.log(results)
                     createMarker(results[i]);
                 }
-
+                updateResults(results);
                 map.setCenter(results[0].geometry.location);
             }
         });
@@ -72,7 +112,7 @@ function init() {
 function renderSidebar(arrData) {
     $('#sidebar').html('')
     for (let restaurant of arrData) {
-        $('#sidebar').append('RestaurantDAta' + JSON.stringify(restaurant))
+        $('#sidebar').append('RestaurantData' + JSON.stringify(restaurant))
     }
 }
 
