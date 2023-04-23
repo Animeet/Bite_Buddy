@@ -1,0 +1,111 @@
+<header class="mb-5">
+    <nav class="navbar navbar-expand-lg bg-body-secondary border-bottom border-3 border-warning border-opacity-25">
+        <a class="navbar-brand fw-bold fs-2 ps-5 mont" href="#">Bite Buddy</a>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item pe-4">
+                        <a class="nav-link active" aria-current="page" href="http://localhost:3001/">Home</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="http://localhost:3001/#features">Features</a>
+                    </li>
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="http://localhost:3001/#about">About</a>
+                    </li>
+
+                    {{!--
+                    {{#if}}
+                    <li class="nav-item pe-4">
+                        <a class="nav-link" href="http://localhost:3001/application">Application</a>
+                    </li>
+                    (Comment1) The Username on line 23 needs to match that of the logged in user
+                    <li class="nav-item pe-4">
+                        <p class="nav-link">Username</p>
+                    </li>
+                    {{/if}}
+
+                    {{#unless}}
+                    --}}
+                    <form class="d-flex" action="/auth/login" method="POST" role="search">
+                        <input name="username" class="form-control me-2" type="text" placeholder="Username"
+                            aria-label="Username">
+                        <input name="password" class="form-control me-2" type="text" placeholder="Password"
+                            aria-label="Password">
+                        <button class="btn btn-outline-primary" type="submit">Login</button>
+                    </form>
+                    {{!-- {{/unless}} --}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="appback d-flex flex-row">
+    <section class="col-2">
+        <div class="ps-5 pt-5">
+            <form class="d-flex p-4 appzip" id="mapApiBox">
+                <input class="form-control me-2" id="input-zip" type="text" pattern="[0-9]{5}"
+                    placeholder="Five digit zip code" aria-label="Zipcode">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+
+
+        <div class="ps-5">
+            <div class="d-flex flex-column p-4 appresults justify-content-center">
+                <h2 class="text-decoration-underline">Results</h2>
+                <ul id="results">
+                    <li>
+                        Type in a search to find your results
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="ps-5 pb-5">
+            <div class="d-flex flex-column p-4 appresults justify-content-center">
+                <h2 class="text-decoration-underline">Favorites</h2>
+                <ul id="favorites">
+                    <li>
+                        No Favorites Have Been Stored
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="col-10 p-5">
+        <div id="map" class="">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224791.2599037498!2d-81.89551078774743!3d28.317601178613945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77eddb1114671%3A0x9b83d5091f83cf0a!2sHard%20Rock%20Cafe!5e0!3m2!1sen!2sus!4v1679516791133!5m2!1sen!2sus"
+                width="100%" height="100%" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+</section>
+
+
+<footer class="bg-body-secondary">
+    <div class="container">
+        <div class="text-center center-block p-1">
+            <h3 class="mont fw-bold foottext p-3">Bite Buddy</h3>
+            <a class="p-3" href="https://www.facebook.com/bitebuddy"><img src="images/icons8-facebook-48.png"
+                    alt="facebook icon"></a>
+            <a class="p-3" href="https://twitter.com/bitebuddy"><img src="images/icons8-twitter-48.png"
+                    alt="twitter icon"></a>
+            <a class="p-3" href="https://instagram.com/bitebuddy"><img src="images/icons8-instagram-48.png"
+                    alt="instagram icon"></a>
+            <a class="p-3" href="https://linkedin.com/bitebuddy"><img src="images/icons8-linkedin-48.png"
+                    alt="linkedin icon"></a>
+            <p class="pt-4">&copy; 2023 Bite Buddy. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiWKfpAZq9FUME7KMWsyEFw0z1vYloYkY&libraries=places&callback=Function.prototype"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>

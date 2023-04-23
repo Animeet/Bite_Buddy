@@ -7,4 +7,4 @@ const public_routes = require('./public_routes')
 // router.use([auth_routes, private_routes, public_routes]);
 router.use('/', [auth_routes, private_routes, public_routes]);
 
-module.exports = router;
+module.exports = router
