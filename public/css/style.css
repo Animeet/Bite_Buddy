@@ -414,6 +414,19 @@ hr {
     background-color: white;
 }
 
+.modal-header {
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+}
 
 #map > * {
     border-radius: 15px;

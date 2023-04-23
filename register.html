@@ -61,7 +61,49 @@
                     <input type="checkbox" checked="checked">
                     <span class="checkmark"></span>
                 </label>
-                <button class="btnstyle" id="regbtn" type="submit">Register</button> 
+                <button id="registerBtn">Register</button> 
+                <div id="myModal" class="modal"></div>
+                    <form action="action_page.php">
+                        <div id="myModal" class="modal">
+                            <form action="action_page.php">
+                                <!-- Modal content: business registration form -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close">&times;</span>
+                                        <h1 text-align="center">Business Registration</h1>
+                                    </div>
+                                    <p><i>Please fill in the information of your business to finish creating an account.</i></p>
+                                    <div class="modal-body">
+                                        <p><label for="BusinessName"><b>Business Name</b></label>
+                                            <input type="nameText" placeholder="Enter Business Name" name="BusinessName" id="BusinessName"
+                                                required>
+                    
+                                            <label for="BusinessAddress"><b>Business Address</b></label>
+                                            <input type="addressText" placeholder="Enter Business Address" name="BusinessAddress"
+                                                id="BusinessAddress" required>
+                    
+                                            <label for="PhoneNumber"><b>Phone Number</b></label>
+                                            <input type="phoneNumber" placeholder="Enter Phone Number" name="PhoneNumber" id="PhoneNumber"
+                                                required>
+                                            <label for="FoodCategory"><b>Food Category</b></label>
+                                            <input type="FoodCategory" placeholder="Enter Food Category" name="FoodCategory"
+                                                id="FoodCategory" required>
+                                            <label for="delivery"><b>Delivery</b></label>
+                                            <input type="delivery" placeholder="Do You Deliver? Yes or No" name="delivery" id="delivery" required>
+                                            <label for="discountDeals"><b>Discount Deals</b></label>
+                                            <input type="discountDeals" placeholder="Enter Discount Deals" name="discountDeals id="
+                                                discountDeals required>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btnstyle" id="regbtn" type="submit">Register</button> 
+                                        <p>By creating an account you agree to our <a href="#">Terms & Conditions</a>.</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </form>
                 <p>By creating an account you agree to our <a href="#">Terms & Conditions</a>.</p>
             </div>
 
@@ -73,41 +115,49 @@
 
 
 <!-- Business information if user is a business -->
-    <section>
+    <!-- <section> -->
         <!-- Trigger/Open the modal -->
-        <button id="myformBtn">Open Business Registration</button>
+        <!-- <button id="myformBtn">Open Business Registration</button> -->
         <!-- the modal -->
-        <div id="myModal" class="modal">
-            <form action="action_page.php">
-            <!-- Modal content: business registration form -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <hi>Business Registration</hi>
-                    <p>Please fill in the information of your business to finish creating an account.</p>
-                <p><label for="BusinessName"><b>Business Name</b></label>
-                    <input type="nameText" placeholder="Enter Business Name" name="BusinessName" id="BusinessName" required>
+        <!-- <div id="myModal" class="modal">
+            <form action="action_page.php"> -->
+                <!-- Modal content: business registration form -->
+                <!-- <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h1 text-align="center">Business Registration</h1>
+                    </div>
+                    <p><i>Please fill in the information of your business to finish creating an account.</i></p>
+                    <div class="modal-body">
+                        <p><label for="BusinessName"><b>Business Name</b></label>
+                            <input type="nameText" placeholder="Enter Business Name" name="BusinessName" id="BusinessName"
+                                required>
     
-                    <label for="BusinessAddress"><b>Business Address</b></label>
-                    <input type="addressText" placeholder="Enter Business Address" name="BusinessAddress"
-                        id="BusinessAddress" required>
+                            <label for="BusinessAddress"><b>Business Address</b></label>
+                            <input type="addressText" placeholder="Enter Business Address" name="BusinessAddress"
+                                id="BusinessAddress" required>
     
-                    <label for="PhoneNumber"><b>Phone Number</b></label>
-                    <input type="phoneNumber" placeholder="Enter Phone Number" name="PhoneNumber" id="PhoneNumber" required>
-    
-                    <label for="FoodCategory"><b>Food Category</b></label>
-                    <input type="FoodCategory" placeholder="Enter Food Category" name="FoodCategory" id="FoodCategory"
-                        required>
-    
-                    <label for="delivery"><b>Delivery</b></label>
-                    <input type="delivery" placeholder="Do You Delivery" name="delivery" id="delivery" required>
-    
-                    <label for="discountDeals"><b>Discount Deals</b></label>
-                    <input type="discountDeals" placeholder="Enter Discount Deals" name="discountDeals id="discountDeals required></p>
-            </div>
+                            <label for="PhoneNumber"><b>Phone Number</b></label>
+                            <input type="phoneNumber" placeholder="Enter Phone Number" name="PhoneNumber" id="PhoneNumber"
+                                required>
+                            <label for="FoodCategory"><b>Food Category</b></label>
+                            <input type="FoodCategory" placeholder="Enter Food Category" name="FoodCategory"
+                                id="FoodCategory" required>
+                            <label for="delivery"><b>Delivery</b></label>
+                            <input type="delivery" placeholder="Do You Deliver? Yes or No" name="delivery" id="delivery" required>
+                            <label for="discountDeals"><b>Discount Deals</b></label>
+                            <input type="discountDeals" placeholder="Enter Discount Deals" name="discountDeals id="
+                                discountDeals required>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btnstyle" id="regbtn" type="submit">Register</button> 
+                        <p>By creating an account you agree to our <a href="#">Terms & Conditions</a>.</p>
+                    </div>
+                </div>
             </form>
-        </div>
-    </section>
-
+        </div> 
+    </section> -->
 
     <footer class="bg-body-secondary">
         <div class="container">
