@@ -16,10 +16,10 @@ router.get('/', async (req, res) => {
   res.render('home');
 });
 
-// // Render the Application view
-// router.get('/application', (req, res) => {
-//   res.render('application');
-// });
+// Render the Application view
+router.get('/application', (req, res) => {
+  res.render('application');
+});
 
 
 // Render the Register Page view
