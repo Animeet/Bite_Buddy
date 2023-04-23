@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 // });
 
 
-// Render the Register Page view
+
 router.get('/register', (req, res) => {
   res.render('register');
 });
