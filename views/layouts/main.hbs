@@ -15,6 +15,47 @@
 </head>
 
 <body>
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg bg-body-secondary border-bottom border-3 border-warning border-opacity-25">
+            <a class="navbar-brand fw-bold fs-2 ps-5 mont" href="#">Bite Buddy</a>
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item pe-4">
+                            <a class="nav-link active" aria-current="page" href="http://localhost:3001/">Home</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                            <a class="nav-link" href="http://localhost:3001/#features">Features</a>
+                        </li>
+                        <li class="nav-item pe-4">
+                            <a class="nav-link" href="http://localhost:3001/#about">About</a>
+                        </li>
+    
+                        {{#if logged_in}}
+                        <li class="nav-item pe-4">
+                            <a class="nav-link" href="http://localhost:3001/application">Application</a>
+                        </li>
+                        <li class="nav-item pe-4 username-display">
+                            <p class="nav-link">Welcome, {{user.username}}</p>
+                            <a class="logout-btn" href="/auth/logout">Log Out</a>
+                        </li>
+                        {{/if}}
+    
+                        {{#unless logged_in}}
+                        <form class="d-flex" action="/auth/login/user" method="POST" role="search">
+                            <input name="username" class="form-control me-2" type="text" placeholder="Username"
+                                aria-label="Username">
+                            <input name="password" class="form-control me-2" type="password" placeholder="Password"
+                                aria-label="Password">
+                            <button class="btn btn-outline-primary" type="submit">Login</button>
+                        </form>
+                        {{/unless}}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     {{{body}}}
 </body>
 
