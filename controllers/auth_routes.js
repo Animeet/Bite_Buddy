@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Business } = require('../models')
 
 
-//User
+//User Log in
 router.post('/auth/login/user', async (req, res) => {
     console.log("LOGGIN IN!")
     const formData = req.body;
@@ -11,19 +11,16 @@ router.post('/auth/login/user', async (req, res) => {
         where: {
             username: formData.username
         }
-    })
-    if (!user) return res.redirect('/register')
+    });
 
-    const valid_pass = await user.validatePassword(formData.password)
-    if (!valid_pass) return res.redirect('/')
+    if (!user) return res.redirect('/register');
 
-    req.session.save(() => {
-        req.session.user_id = user.id;
-        req.session.username = user.username;
-        req.session.email = user.email;
-        req.session.logged_in = true;
-        res.redirect('/')
-    })
+    const valid_pass = await user.validatePassword(formData.password);
+    if (!valid_pass) return res.redirect('/');
+
+    req.session.user_id = user.id;
+
+    res.redirect('/');
 });
 
 
@@ -77,6 +74,12 @@ router.post('/auth/register/business', async (req, res) => {
     }
 });
 
+
+router.get('/auth/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/');
+    });
+});
 
 
 // // Business

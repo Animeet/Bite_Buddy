@@ -29,15 +29,15 @@ function updateFavorites() {
 }
 
 async function addFavorite() {
-    const placeName = $(this).data('place-name')
+    const placeName = $(this).data('place-name');
     const favorite = await $.post('/favorite', {
         name: placeName
-    })
-    
+    });
+
     if (!favorite) return;
 
     favorites.push(favorite)
-   
+
     updateFavorites()
 }
 $('#results').on('click', 'button', addFavorite)

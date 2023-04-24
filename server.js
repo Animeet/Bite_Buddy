@@ -18,7 +18,7 @@ app.set('view engine', 'hbs');
 app.set('views', './views');
 
 app.use(express.json());
-app.use(express.urlencoded( {extended: true} ));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -28,6 +28,6 @@ app.use(session({
 
 app.use('/', routes);
 
-db.sync().then (() => {
+db.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Server listening on Port %s', PORT))
 });
