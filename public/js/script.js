@@ -8,9 +8,9 @@ function updateResults(results) {
     resultsOutput.empty()
     results.forEach((place) => {
         resultsOutput.append(`
-        <li>
+        <li class="p-2">
             <span>${place.name}</span>
-            <button data-place-name="${place.name}">Favorite</button>
+            <button data-place-name="${place.name}" class="align-self-start">Favorite</button>
         </li>
         `)
     })

@@ -26,7 +26,6 @@ function registerBusiness(event) {
 
     const isDelivery = $("#del-yes").is(":checked");
     console.log(isDelivery)
-    // The below (22-31) was added as a "I think this is how it is supposed to work"
 
     $.post('/auth/register/user', {
         first_name: $('#accfirstName').val(),
