@@ -6,6 +6,10 @@ Bite Buddy is a web application that helps users eat out more often at a lower c
 
 ## Installation 
 
+- Sequelize 
+- Express
+- Axios
+- Node
 
 ## Technologies Used 
 
