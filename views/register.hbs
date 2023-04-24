@@ -14,27 +14,24 @@
                         <a class="nav-link" href="http://localhost:3001/#about">About</a>
                     </li>
 
-                    {{!--
-                    {{#if}}
+                    {{#if logged_in}}
                     <li class="nav-item pe-4">
                         <a class="nav-link" href="http://localhost:3001/application">Application</a>
                     </li>
-                    (Comment1) The Username on line 23 needs to match that of the logged in user
                     <li class="nav-item pe-4">
-                        <p class="nav-link">Username</p>
+                        <p class="nav-link">User's Username</p>
                     </li>
                     {{/if}}
 
-                    {{#unless}}
-                    --}}
-                    <form class="d-flex" action="/auth/login" method="POST" role="search">
+                    {{#unless logged_in}}
+                    <form class="d-flex" action="/auth/login/user" method="POST" role="search">
                         <input name="username" class="form-control me-2" type="text" placeholder="Username"
                             aria-label="Username">
                         <input name="password" class="form-control me-2" type="text" placeholder="Password"
                             aria-label="Password">
                         <button class="btn btn-outline-primary" type="submit">Login</button>
                     </form>
-                    {{!-- {{/unless}} --}}
+                    {{/unless}}
                 </ul>
             </div>
         </div>
@@ -80,7 +77,7 @@
 <section>
     <!-- the modal -->
     <div id="myModal" class="modal">
-        <form action="action_page.php" id="busregister">
+        <form id="busregister">
             <!-- Modal content: business registration form -->
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -103,11 +100,21 @@
                         required>
 
                     <label for="delivery"><b>Delivery</b></label>
-                    <input type="delivery" placeholder="Do You Delivery" name="delivery" id="delivery" required>
+                    <label for="delivery"><b>Yes</b></label>
+                    <input type="radio" id="del-yes" name="delivery" value="true">
+                    <label for="delivery"><b>No</b></label>
+                    <input type="radio" id="del-no" name="delivery" value="false">
+                    {{!-- <input type="delivery" placeholder="Do You Delivery" name="delivery" id="delivery" required> --}}
+                    {{!-- <select name="delivery" id="delivery">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select> --}}
+                    
+
+                    <br/>
 
                     <label for="discountDeals"><b>Discount Deals</b></label>
-                    <input type="discountDeals" placeholder="Enter Discount Deals" name="discountDeals id="
-                        discountDeals required>
+                    <input type="discountDeals" placeholder="Enter Discount Deals" name="discountDeals" id="discountDeals" required>
                     <button class="btnstyle" type="submit"> Business Register</button>
                 </p>
             </div>
