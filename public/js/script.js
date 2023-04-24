@@ -75,6 +75,7 @@ function initMap(zip) {
 
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, (results, status) => {
+            if (!results.length) return updateResults([])
             if (status === google.maps.places.PlacesServiceStatus.OK && results) {
                 for (let i = 0; i < results.length; i++) {
                     console.log(results)
