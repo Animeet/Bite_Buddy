@@ -14,27 +14,24 @@
                         <a class="nav-link" href="http://localhost:3001/#about">About</a>
                     </li>
 
-                    {{!--
-                    {{#if}}
+                    {{#if logged_in}}
                     <li class="nav-item pe-4">
                         <a class="nav-link" href="http://localhost:3001/application">Application</a>
                     </li>
-                    (Comment1) The Username on line 23 needs to match that of the logged in user
                     <li class="nav-item pe-4">
-                        <p class="nav-link">Username</p>
+                        <p class="nav-link">User's Username</p>
                     </li>
                     {{/if}}
 
-                    {{#unless}}
-                    --}}
-                    <form class="d-flex" action="/auth/login" method="POST" role="search">
+                    {{#unless logged_in}}
+                    <form class="d-flex" action="/auth/login/user" method="POST" role="search">
                         <input name="username" class="form-control me-2" type="text" placeholder="Username"
                             aria-label="Username">
                         <input name="password" class="form-control me-2" type="text" placeholder="Password"
                             aria-label="Password">
                         <button class="btn btn-outline-primary" type="submit">Login</button>
                     </form>
-                    {{!-- {{/unless}} --}}
+                    {{/unless}}
                 </ul>
             </div>
         </div>

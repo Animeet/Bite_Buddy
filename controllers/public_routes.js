@@ -13,18 +13,24 @@ router.get('/', async (req, res) => {
   //       id: req.session.user_id
   //   }
 // })
-  res.render('home');
+  res.render('home', {
+    logged_in: req.session.logged_in
+  });
 });
 
 // Render the Application view
 router.get('/application', (req, res) => {
-  res.render('application');
+  res.render('application', {
+    logged_in: req.session.logged_in
+  });
 });
 
 
 
 router.get('/register', (req, res) => {
-  res.render('register');
+  res.render('register', {
+    logged_in: req.session.logged_in
+  });
 });
 
 router.get('/application1', (req, res) => {
