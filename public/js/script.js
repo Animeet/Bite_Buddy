@@ -8,9 +8,9 @@ function updateResults(results) {
     resultsOutput.empty()
     results.forEach((place) => {
         resultsOutput.append(`
-        <li>
+        <li class="p-2">
             <span>${place.name}</span>
-            <button data-place-name="${place.name}">Favorite</button>
+            <button data-place-name="${place.name}" class="align-self-start">Favorite</button>
         </li>
         `)
     })
@@ -29,15 +29,15 @@ function updateFavorites() {
 }
 
 async function addFavorite() {
-    const placeName = $(this).data('place-name')
+    const placeName = $(this).data('place-name');
     const favorite = await $.post('/favorite', {
         name: placeName
-    })
-    
+    });
+
     if (!favorite) return;
 
     favorites.push(favorite)
-   
+
     updateFavorites()
 }
 $('#results').on('click', 'button', addFavorite)
@@ -75,6 +75,7 @@ function initMap(zip) {
 
         service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, (results, status) => {
+            if (!results.length) return updateResults([])
             if (status === google.maps.places.PlacesServiceStatus.OK && results) {
                 for (let i = 0; i < results.length; i++) {
                     console.log(results)

@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* HEADER STYLES */
+.username-display {
+    position: relative;
+}
+
+.username-display:hover .logout-btn {
+    display: initial;
+}
+
+.logout-btn {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #bbb;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 10px;
+    display: none;
+}
+
 .mont {
     font-family: 'Montserrat', sans-serif;
 }

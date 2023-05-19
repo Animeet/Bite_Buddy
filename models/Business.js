@@ -2,29 +2,32 @@ const { Model, DataTypes } = require('sequelize');
 // const bcrypt = require('bcrypt');
 const db = require('../config/connection');
 
-class Business extends Model {};
+class Business extends Model { };
 
 Business.init({
+    type: {
+        type: DataTypes.STRING
+    },
     username: {
-        type:DataTypes.STRING,
+        type: DataTypes.STRING,
         references: {
             model: 'user',
             key: 'username'
-          },
+        },
     },
     email: {
-        type:DataTypes.STRING,
+        type: DataTypes.STRING,
         references: {
             model: 'user',
             key: 'email'
-          },
+        },
     },
     user_id: {
         type: DataTypes.INTEGER,
         references: {
-        model: 'user',
-        key: 'id'
-      },
+            model: 'user',
+            key: 'id'
+        },
     },
     business_name: {
         type: DataTypes.STRING,
