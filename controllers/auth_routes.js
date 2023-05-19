@@ -12,7 +12,7 @@ router.post('/auth/login/user', async (req, res) => {
             username: formData.username
         }
     });
-
+    console.log(user)
     if (!user) return res.redirect('/register');
 
     const valid_pass = await user.validatePassword(formData.password);

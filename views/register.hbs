@@ -1,105 +1,173 @@
-<section class="registergrad border-bottom border-5 border-warning border-opacity-25">
-    <div class="container d-flex flex-row justify-content-between align-items-center sectionheight">
-        <div class="text-light text-center col-3">
-            <h2 class="fw-bolder mb-5" id="regwelcome">WELCOME</h2>
-            <form action="" id="regform">
-                <label for="exampleInputFirstname">First Name</label>
-                <input class="form-control mb-4" type="text" placeholder="xxxxxxxxxxx" id="accfirstName"
-                    aria-label="FirstName">
-                <label for="exampleInputLastrname">Last Name</label>
-                <input class="form-control mb-4" type="text" placeholder="xxxxxxxxxxx" id="acclastName"
-                    aria-label="LastName">
-                <label for="exampleInputEmail">Email</label>
-                <input class="form-control mb-4" type="text" placeholder="xxxxxxxxxxx" id="accemail" aria-label="Email">
-                <label for="exampleInputUsername">Username</label>
-                <input class="form-control mb-4" type="text" placeholder="xxxxxxxxxxx" id="accusername"
-                    aria-label="Username">
-                <label for="exampleInputPassword">Password</label>
-                <input class="form-control mb-4" type="password" placeholder="• • • • • • • • • •" id="accpassword"
-                    aria-label="Password">
-                <label class="checkBox_container">Please check if you are a Business
-                    <input type="checkbox" id="buscheck">
-                    <span class="checkmark"></span>
-                </label>
-                <button class="btnstyle" id="regbtn" type="submit">Register</button>
-                <p>By creating an account you agree to our <a href="#">Terms & Conditions</a>.</p>
-            </form>
-        </div>
-
-        <div id="imgpad">
-            <img id="regimg" src="images/kindpng_4411630.png" alt="3D image of website page">
-        </div>
+<section
+  class="registergrad border-bottom border-5 border-warning border-opacity-25"
+>
+  <div
+    class="container d-flex flex-row justify-content-between align-items-center sectionheight"
+  >
+    <div class="text-light text-center col-3">
+      <h2 class="fw-bolder mb-5" id="regwelcome">WELCOME</h2>
+      <form action="" id="regform">
+        <label for="exampleInputFirstname">First Name</label>
+        <input
+          class="form-control mb-4"
+          type="text"
+          placeholder="xxxxxxxxxxx"
+          id="accfirstName"
+          aria-label="FirstName"
+        />
+        <label for="exampleInputLastrname">Last Name</label>
+        <input
+          class="form-control mb-4"
+          type="text"
+          placeholder="xxxxxxxxxxx"
+          id="acclastName"
+          aria-label="LastName"
+        />
+        <label for="exampleInputEmail">Email</label>
+        <input
+          class="form-control mb-4"
+          type="text"
+          placeholder="xxxxxxxxxxx"
+          id="accemail"
+          aria-label="Email"
+        />
+        <label for="exampleInputUsername">Username</label>
+        <input
+          class="form-control mb-4"
+          type="text"
+          placeholder="xxxxxxxxxxx"
+          id="accusername"
+          aria-label="Username"
+        />
+        <label for="exampleInputPassword">Password</label>
+        <input
+          class="form-control mb-4"
+          type="password"
+          placeholder="• • • • • • • • • •"
+          id="accpassword"
+          aria-label="Password"
+        />
+        <label class="checkBox_container">Please check if you are a Business
+          <input type="checkbox" id="buscheck" />
+          <span class="checkmark"></span>
+        </label>
+        <button class="btnstyle" id="regbtn" type="submit">Register</button>
+        <p>By creating an account you agree to our
+          <a href="#">Terms & Conditions</a>.</p>
+      </form>
     </div>
-</section>
 
+    <div id="imgpad">
+      <img
+        id="regimg"
+        src="images/kindpng_4411630.png"
+        alt="3D image of website page"
+      />
+    </div>
+  </div>
+</section>
 
 <!-- Business information if user is a business -->
 <section>
-    <!-- the modal -->
-    <div id="myModal" class="modal">
-        <form id="busregister">
-            <!-- Modal content: business registration form -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Business Registration</h2>
-                <p>Please fill in the information of your business to finish creating an account.</p>
-                <p><label for="BusinessName"><b>Business Name</b></label>
-                    <input type="nameText" placeholder="Enter Business Name" name="BusinessName" id="BusinessName"
-                        required>
+  <!-- the modal -->
+  <div id="myModal" class="modal">
+    <form id="busregister">
+      <!-- Modal content: business registration form -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Business Registration</h2>
+        <p>Please fill in the information of your business to finish creating an
+          account.</p>
+        <p><label for="BusinessName"><b>Business Name</b></label>
+          <input
+            type="nameText"
+            placeholder="Enter Business Name"
+            name="BusinessName"
+            id="BusinessName"
+            required
+          />
 
-                    <label for="BusinessAddress"><b>Business Address</b></label>
-                    <input type="addressText" placeholder="Enter Business Address" name="BusinessAddress"
-                        id="BusinessAddress" required>
+          <label for="BusinessAddress"><b>Business Address</b></label>
+          <input
+            type="addressText"
+            placeholder="Enter Business Address"
+            name="BusinessAddress"
+            id="BusinessAddress"
+            required
+          />
 
-                    <label for="PhoneNumber"><b>Phone Number</b></label>
-                    <input type="phoneNumber" placeholder="Enter Phone Number" name="PhoneNumber" id="PhoneNumber"
-                        required>
+          <label for="PhoneNumber"><b>Phone Number</b></label>
+          <input
+            type="phoneNumber"
+            placeholder="Enter Phone Number"
+            name="PhoneNumber"
+            id="PhoneNumber"
+            required
+          />
 
-                    <label for="FoodCategory"><b>Food Category</b></label>
-                    <input type="FoodCategory" placeholder="Enter Food Category" name="FoodCategory" id="FoodCategory"
-                        required>
-
-                    <label for="delivery"><b>Delivery</b></label>
-                    <label for="delivery"><b>Yes</b></label>
-                    <input type="radio" id="del-yes" name="delivery" value="true">
-                    <label for="delivery"><b>No</b></label>
-                    <input type="radio" id="del-no" name="delivery" value="false">
-                    {{!-- <input type="delivery" placeholder="Do You Delivery" name="delivery" id="delivery" required> --}}
-                    {{!-- <select name="delivery" id="delivery">
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select> --}}
-                    
-
-                    <br/>
-
-                    <label for="discountDeals"><b>Discount Deals</b></label>
-                    <input type="discountDeals" placeholder="Enter Discount Deals" name="discountDeals" id="discountDeals" required>
-                    <button class="btnstyle" type="submit"> Business Register</button>
-                </p>
+          <label for="FoodCategory"><b>Food Category</b></label>
+          <input
+            type="FoodCategory"
+            placeholder="Enter Food Category"
+            name="FoodCategory"
+            id="FoodCategory"
+            required
+          />
+          <div class="flex flex-col">
+            <label for="delivery"><b>Delivery</b></label>
+            <div class="flex flex-row">
+              <label for="delivery"><b>Yes</b></label>
+              <input type="radio" id="del-yes" name="delivery" value="true" />
+              <label for="delivery"><b>No</b></label>
+              <input type="radio" id="del-no" name="delivery" value="false" />
             </div>
-        </form>
-    </div>
+          </div>
+
+          <br />
+
+          <label for="discountDeals"><b>Discount Deals</b></label>
+          <input
+            type="discountDeals"
+            placeholder="Enter Discount Deals"
+            name="discountDeals"
+            id="discountDeals"
+            required
+          />
+          <button class="btnstyle" type="submit"> Business Register</button>
+        </p>
+      </div>
+    </form>
+  </div>
 </section>
 
-
 <footer class="bg-body-secondary">
-    <div class="container">
-        <div class="text-center center-block p-1">
-            <h3 class="mont fw-bold foottext p-3">Bite Buddy</h3>
-            <a class="p-3" href="https://www.facebook.com/bitebuddy"><img src="images/icons8-facebook-48.png"
-                    alt="facebook icon"></a>
-            <a class="p-3" href="https://twitter.com/bitebuddy"><img src="images/icons8-twitter-48.png"
-                    alt="twitter icon"></a>
-            <a class="p-3" href="https://instagram.com/bitebuddy"><img src="images/icons8-instagram-48.png"
-                    alt="instagram icon"></a>
-            <a class="p-3" href="https://linkedin.com/bitebuddy"><img src="images/icons8-linkedin-48.png"
-                    alt="linkedin icon"></a>
-            <p class="pt-4">&copy; 2023 Bite Buddy. All Rights Reserved</p>
-        </div>
+  <div class="container">
+    <div class="text-center center-block p-1">
+      <h3 class="mont fw-bold foottext p-3">Bite Buddy</h3>
+      <a class="p-3" href="https://www.facebook.com/bitebuddy"><img
+          src="images/icons8-facebook-48.png"
+          alt="facebook icon"
+        /></a>
+      <a class="p-3" href="https://twitter.com/bitebuddy"><img
+          src="images/icons8-twitter-48.png"
+          alt="twitter icon"
+        /></a>
+      <a class="p-3" href="https://instagram.com/bitebuddy"><img
+          src="images/icons8-instagram-48.png"
+          alt="instagram icon"
+        /></a>
+      <a class="p-3" href="https://linkedin.com/bitebuddy"><img
+          src="images/icons8-linkedin-48.png"
+          alt="linkedin icon"
+        /></a>
+      <p class="pt-4">&copy; 2023 Bite Buddy. All Rights Reserved</p>
     </div>
+  </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"
+></script>
 <script src="js/register-script.js"></script>

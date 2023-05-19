@@ -194,6 +194,7 @@
 .testimonialItem_info p {
     color: #7c8595;
     font-style: italic;
+    min-height: 200px;
     line-height: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -232,6 +233,8 @@
 
 .ourStory_top,
 .ourStory_container {
+    display: flex;
+    justify-content: center;
     padding: 0 1rem;
 }
 
@@ -266,6 +269,7 @@
 .storyInfo {
     background-color: white;
     padding: 5.5rem 2rem 2rem 2rem;
+    height: 400px;
     margin-top: -4rem;
     /* box-shadow: rgb(225, 221,118) 0px 0px 25px;; */
 }
@@ -410,7 +414,7 @@ hr {
     margin: 15% auto; /* 15% from the top and centered*/
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    max-width: 50%; 
 }
 
 /* the close button*/
@@ -419,6 +423,12 @@ hr {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.mapsize {
+    border: none;
+    border-radius: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .close:hover,
