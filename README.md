@@ -23,7 +23,14 @@ Bite Buddy is a web application that helps users eat out more often at a lower c
 - Express
 - Axios
 
-## DEMO
+
+## Application Images
+
+![Image 1](public/images/1.png)
+![Image 2](public/images/2.png)
+![Image 3](public/images/3.png)
+![Image 4](public/images/4.png)
+
 
 ## Usage
 
@@ -39,10 +46,13 @@ Users will be able to open the application to the home page and see a navigation
 ## Websites
 
 - [Github](https://github.com/Animeet/Bite_Buddy)
-- [Github Deployed]()
-- [Heroku Live Deployed]() 
+
+- [Heroku Live Deployed](https://intense-anchorage-81492.herokuapp.com/) 
+
 
 ## License 
 
 Refer to the LICENSE under the Repository
+
 Copyright © B, Zachary. Guillaume, Kimberlie. Zentai, Nick. Jones, Solomon. All rights reserved.
+
