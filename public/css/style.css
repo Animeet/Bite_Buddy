@@ -84,7 +84,7 @@
 }
 
 .sectionheight {
-    height: 700px;
+    height: 800px;
 }
 
 #imgpad {
@@ -117,6 +117,24 @@
 
 .foottext {
     font-size: 35px;
+}
+
+.headerlogosize {
+    width: 310px;
+    height: 55px;
+    margin: 0 30px;
+}
+
+.footerlogosize {
+    width: 310px;
+    height: 65px;
+    margin: 25px 0;
+}
+
+.socialsize {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
 }
 
 .borbot {
